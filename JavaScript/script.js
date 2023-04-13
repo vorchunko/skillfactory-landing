@@ -13,7 +13,7 @@ const entities = [
         repairTime: '3.5 month',
         size: '81 m2',
         repairCost: 'Upon request',
-        slide: '/image/image-room1'
+        slide: '../image/image-room1.png'
     },
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
@@ -21,7 +21,7 @@ const entities = [
         repairTime: '4 months',
         size: '105 m2',
         repairCost: 'Upon request',
-        slide: '/image/image-room2'
+        slide: '../image/image-room2.png'
         },
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
@@ -29,7 +29,7 @@ const entities = [
         repairTime: '3 month',
         size: '93 m2',
         repairCost: 'Upon request',
-        slide: '/image/image-room3'
+        slide: '../image/image-room3.png'
     }
   ]
 
@@ -47,10 +47,14 @@ const setEntity = (index) => {
   let currentIndex = 0
   
   prev.addEventListener('click', () => {
-    setEntity(currentIndex - 1);
-    currentIndex -= 1;
+    currentIndex = currentIndex === 0 ? entities.length - 1 : currentIndex - 1;
+    setEntity(currentIndex);
   })
+  
   next.addEventListener('click', () => {
-    setEntity(currentIndex + 1);
-    currentIndex += 1;
+    currentIndex = currentIndex === entities.length - 1 ? 0 : currentIndex + 1;
+    setEntity(currentIndex);
   })
+  
+
+  

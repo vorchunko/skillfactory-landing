@@ -1111,7 +1111,11 @@ margin-left: 10px;
 .slide{
 background-image: url("/image/image-room1.png");
   background-size: cover;
+  height: 482px;
+width: 679px;
 }
+
+
 
  #prev {
     background-color: #131313;
