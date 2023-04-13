@@ -43,7 +43,7 @@ const setEntity = (index) => {
   }
   
   const prev = document.getElementById('prev')
-  const next = document.getElementById('.next')
+  const next = document.getElementById('next')
   let currentIndex = 0
   
   prev.addEventListener('click', () => {
