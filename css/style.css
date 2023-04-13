@@ -1107,4 +1107,21 @@ margin-left: 10px;
 @media (max-width: 760px ) {
 
 }
-.quest-back
+
+.slide{
+background-image: url("/image/image-room1.png");
+  background-size: cover;
+}
+
+ #prev {
+    background-color: #131313;
+    border: none;
+    outline: none;
+  }
+
+  #next {
+    background-color: #131313;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+}
