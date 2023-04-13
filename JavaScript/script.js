@@ -17,17 +17,17 @@ const entities = [
     },
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
-        cityBlock: 'Rostov-on-Don\nPatriotic',
-        repairTime: '3 months',
-        size: '93 m2',
+        cityBlock: 'Sochi\nThieves',
+        repairTime: '4 months',
+        size: '105 m2',
         repairCost: 'Upon request',
         slide: '/image/image-room2'
         },
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
-        cityBlock: 'Rostov-on-Don\nLCD admiral',
-        repairTime: '3.5 month',
-        size: '81 m2',
+        cityBlock: 'Rostov-on-Don\nPatriotic',
+        repairTime: '3 month',
+        size: '93 m2',
         repairCost: 'Upon request',
         slide: '/image/image-room3'
     }
