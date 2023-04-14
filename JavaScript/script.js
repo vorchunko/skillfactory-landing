@@ -1,11 +1,3 @@
-const slide = document.querySelector('.slide')
-const leftBlockP = document.querySelector('.left-block-p')
-const cityBlock = document.querySelector('.city-block')
-const repairTime = document.querySelector('.repair-time')
-const size = document.querySelector('.size')
-const repairCost = document.querySelector('.repair-cost')
-
-
 const entities = [
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
@@ -13,15 +5,15 @@ const entities = [
         repairTime: '3.5 month',
         size: '81 m2',
         repairCost: 'Upon request',
-        slide: '../image/image-room1.png'
-    },
+        slide: '../image/image-room1.png',
+       },
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
         cityBlock: 'Sochi\nThieves',
         repairTime: '4 months',
         size: '105 m2',
         repairCost: 'Upon request',
-        slide: '../image/image-room2.png'
+        slide: '../image/image-room2.png',
         },
     {
         leftBlockP: 'Only a small part of the work performed by our company is presented\non the site. For 14 years on in the construction\nmarket we have made happy more than 1000 families',
@@ -29,18 +21,28 @@ const entities = [
         repairTime: '3 month',
         size: '93 m2',
         repairCost: 'Upon request',
-        slide: '../image/image-room3.png'
-    }
+        slide: '../image/image-room3.png',
+      }
   ]
 
-const setEntity = (index) => {
+
+const leftBlockP = document.querySelector('.left-block-p')
+const cityBlock = document.querySelector('.city-block')
+const repairTime = document.querySelector('.repair-time')
+const size = document.querySelector('.size')
+const repairCost = document.querySelector('.repair-cost')
+const slide = document.querySelector('.slide')
+
+
+    const setEntity = (index) => {
     leftBlockP.innerText = entities[index].leftBlockP
     cityBlock.innerText = entities[index].cityBlock
     repairTime.innerText = entities[index].repairTime
     size.innerText = entities[index].size
     repairCost.innerText = entities[index].repairCost
-    slide.style.backgroundImage = `url(${entities[index].slide})`
+    slide.style.backgroundImage = `url(${entities[index].slide})`    
   }
+  
   
   const prev = document.getElementById('prev')
   const next = document.getElementById('next')
@@ -55,6 +57,4 @@ const setEntity = (index) => {
     currentIndex = currentIndex === entities.length - 1 ? 0 : currentIndex + 1;
     setEntity(currentIndex);
   })
-  
 
-  
