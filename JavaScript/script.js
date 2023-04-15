@@ -32,6 +32,7 @@ const repairTime = document.querySelector('.repair-time')
 const size = document.querySelector('.size')
 const repairCost = document.querySelector('.repair-cost')
 const slide = document.querySelector('.slide')
+const dots = document.querySelectorAll('.dots')
 
 
     const setEntity = (index) => {
@@ -40,13 +41,19 @@ const slide = document.querySelector('.slide')
     repairTime.innerText = entities[index].repairTime
     size.innerText = entities[index].size
     repairCost.innerText = entities[index].repairCost
-    slide.style.backgroundImage = `url(${entities[index].slide})`    
+    slide.style.backgroundImage = `url(${entities[index].slide})`  
+    
+    document.querySelector('.dots.active')?.classList.remove('active')
+    dots[index].classList.add('active')
   }
   
   
   const prev = document.getElementById('prev')
   const next = document.getElementById('next')
+  let sliderDots = document.querySelector(".slider__dots");
+
   let currentIndex = 0
+  setEntity(currentIndex)
   
   prev.addEventListener('click', () => {
     currentIndex = currentIndex === 0 ? entities.length - 1 : currentIndex - 1;
@@ -57,4 +64,11 @@ const slide = document.querySelector('.slide')
     currentIndex = currentIndex === entities.length - 1 ? 0 : currentIndex + 1;
     setEntity(currentIndex);
   })
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", function () {
+        currentIndex = index
+        setEntity(currentIndex);        
+    });
+});
 

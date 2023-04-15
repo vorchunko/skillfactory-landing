@@ -1115,8 +1115,6 @@ background-image: url("/image/image-room1.png");
 width: 679px;
 }
 
-
-
  #prev {
     background-color: #131313;
     border: none;
@@ -1127,14 +1125,36 @@ width: 679px;
     background-color: #131313;
     border: none;
     outline: none;
-    margin-left: 20px;
 }
 
-#dots {
+.dots {
     background-color: #131313;
     border: none;
     outline: none;
 }
 
+.slider__dots{
+    display: flex;
+}
 
+.slider__dots .dots{
+    display: inline-block;
+    margin: 0 10px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid grey;
+    background-color: grey;
+    border-radius: 50%;
+    outline: none;
+}
+.slider__dots .dots.active {
+    border: 2px solid white;
+    background-color: white;
+}
+
+.slider__dots .dots:hover{
+    border-color: white;
+    background-color: black;
+    transition: all ease 0.7s;
+} 
 
